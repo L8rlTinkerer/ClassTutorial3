@@ -30,5 +30,28 @@ namespace Gallery3Selfhost
             }
         }
 
+        //  generic method that can do create, update and delete with any entity
+        private int process<TEntity>(TEntity prItem, System.Data.Entity.EntityState prState) where TEntity : class //  TEntity is any kind of class
+        {
+            using (Gallery_DataEntities2 lcContext = new Gallery_DataEntities2())
+            {
+                lcContext.Entry(prItem).State = prState; // sets the state of the item
+                int lcCount = lcContext.SaveChanges(); // SaveChanges() writes the data back to the database and returns the number of rows affected
+                return lcCount;
+            }
+        }
+
+
+        public int UpdateArtist(clsArtist prArtist)
+        {
+            return process(prArtist.MapToEntity(), System.Data.Entity.EntityState.Modified);
+        }
+
+
+        public int InsertArtist(clsArtist prArtist)
+        {
+            return process(prArtist.MapToEntity(), System.Data.Entity.EntityState.Added);
+        }
+
     }
 }
