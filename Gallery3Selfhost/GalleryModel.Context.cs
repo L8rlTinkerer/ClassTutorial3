@@ -13,10 +13,10 @@ namespace Gallery3Selfhost
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Gallery_DataEntities : DbContext
+    public partial class Gallery_DataEntities2 : DbContext
     {
-        public Gallery_DataEntities()
-            : base("name=Gallery_DataEntities")
+        public Gallery_DataEntities2()
+            : base("name=Gallery_DataEntities2")
         {
         }
     

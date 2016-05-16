@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gallery3Selfhost.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -14,6 +15,9 @@ namespace Gallery3Selfhost
         //  attribute necessary for WCF services
         [OperationContract]
         List<string> GetArtistNames();
+
+        [OperationContract]
+        clsArtist GetArtist(string prArtistName);
     }
 
 

@@ -73,6 +73,7 @@
     <Compile Include="Artist.cs">
       <DependentUpon>GalleryModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO.cs" />
     <Compile Include="GalleryModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,25 +118,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GalleryModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GalleryModel.edmx</DependentUpon>
-      <LastGenOutput>GalleryModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="GalleryModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GalleryModel.edmx</DependentUpon>
-      <LastGenOutput>GalleryModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="Gallery_Data.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Gallery_Data_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Gallery_Data.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
@@ -149,6 +131,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GalleryModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GalleryModel.edmx</DependentUpon>
+      <LastGenOutput>GalleryModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GalleryModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GalleryModel.edmx</DependentUpon>
+      <LastGenOutput>GalleryModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

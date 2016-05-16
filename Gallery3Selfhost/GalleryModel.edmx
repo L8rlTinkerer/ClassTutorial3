@@ -85,7 +85,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Gallery_DataEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Gallery_DataEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Artists" EntityType="Self.Artist" />
           <EntitySet Name="Works" EntityType="Self.Work" />
           <AssociationSet Name="FK_WORK_ARTIST" Association="Self.FK_WORK_ARTIST">
@@ -112,7 +112,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Gallery_DataModelStoreContainer" CdmEntityContainer="Gallery_DataEntities">
+        <EntityContainerMapping StorageEntityContainer="Gallery_DataModelStoreContainer" CdmEntityContainer="Gallery_DataEntities2">
           <EntitySetMapping Name="Artists">
             <EntityTypeMapping TypeName="Gallery_DataModel.Artist">
               <MappingFragment StoreEntitySet="Artist">
